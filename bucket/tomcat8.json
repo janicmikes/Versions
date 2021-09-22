@@ -3,11 +3,11 @@
     "version": "8.5.71",
     "architecture": {
         "64bit": {
-            "url": "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.71/bin/apache-tomcat-8.5.71-windows-x64.zip",
+            "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.71/bin/apache-tomcat-8.5.71-windows-x64.zip",
             "hash": "sha512:006dd0487c24e36c36c9a700dbc11732e28fdb81e70c6c08b2e7b2c419ff3d06a9360714b17f04848ae490fec708f65bfc88d2b69380523af3f9a7eb7f772132"
         },
         "32bit": {
-            "url": "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.71/bin/apache-tomcat-8.5.71-windows-x86.zip",
+            "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.71/bin/apache-tomcat-8.5.71-windows-x86.zip",
             "hash": "sha512:2a2097a174b016a085b3ab1a3f68e8e124b654a599552dd5e166e5160ba5b209323c1ac0dfc98015b4fa76f636819b51fb2e538bc795a74ac2b781e933955937"
         }
     },
@@ -17,20 +17,24 @@
         "CATALINA_HOME": "$dir",
         "CATALINA_BASE": "$dir"
     },
+    "persist": [
+        "conf",
+        "webapps"
+    ],
     "suggest": {
         "JRE": "java/openjdk"
     },
     "checkver": {
-        "url": "https://www.apache.org/dist/tomcat/tomcat-8/?C=M;O=D",
+        "url": "https://archive.apache.org/dist/tomcat/tomcat-8/?C=M;O=D",
         "re": "v(?<version>[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.apache.org/dist/tomcat/tomcat-8/v$version/bin/apache-tomcat-$version-windows-x64.zip"
+                "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v$version/bin/apache-tomcat-$version-windows-x64.zip"
             },
             "32bit": {
-                "url": "https://www.apache.org/dist/tomcat/tomcat-8/v$version/bin/apache-tomcat-$version-windows-x86.zip"
+                "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v$version/bin/apache-tomcat-$version-windows-x86.zip"
             }
         },
         "hash": {
